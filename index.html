@@ -31,6 +31,8 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* ===== NAVIGATION ===== */
@@ -622,6 +624,22 @@ strong { color: var(--text-primary); }
   border-top: 4px solid var(--accent-teal);
 }
 
+/* ===== EMAIL LINKS ===== */
+a[href^="mailto:"] {
+  color: var(--accent-teal);
+  text-decoration: none;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  display: inline;
+  pointer-events: auto;
+  -webkit-touch-callout: default;
+  transition: color 0.3s ease;
+}
+a[href^="mailto:"]:hover {
+  text-decoration: underline;
+  color: var(--accent-gold);
+}
+
 /* ===== ANIMATIONS ===== */
 .fade-up {
   opacity: 0;
@@ -647,10 +665,26 @@ strong { color: var(--text-primary); }
 }
 @media (max-width: 600px) {
   .slide { padding: 30px 20px; }
+  h1 { font-size: 1.9rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1rem; }
+  p { font-size: 0.95rem; }
   .comp-table, .life-table { font-size: 0.78rem; }
   .comp-table thead th, .life-table thead th { padding: 10px 8px; font-size: 0.7rem; }
   .comp-table tbody td, .life-table tbody td { padding: 10px 8px; }
-  .slide-footer { left: 20px; right: 20px; }
+  .slide-footer { left: 20px; right: 20px; font-size: 0.7rem; }
+  a[href^="mailto:"] {
+    font-size: 0.85rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  .cta-info p {
+    font-size: 0.9rem;
+  }
+  .names, .company, .emails, .licensing {
+    margin-bottom: 8px;
+  }
 }
 </style>
 </head>
@@ -671,7 +705,7 @@ strong { color: var(--text-primary); }
     <p>Prepared by:<br>
     <strong>Marc Merritt, RVP</strong> &amp; <strong>Marylene Teopengco-Merritt, RVP</strong><br>
     MMT Financial and Insurance | Freedom Equity Group<br>
-    <a href="/cdn-cgi/l/email-protection#aec3cfdccdeec3c3dac8c7c0c7c0dddbdccfc0cdcb80cdc1c3"><span class="__cf_email__" data-cfemail="2944485b4a6944445d4f404740475a5c5b48474a4c074a4644">[email&#160;protected]</span></a> | <a href="/cdn-cgi/l/email-protection#82efe3f0fbeee7ece7c2efeff6e4ebecebecf1f7f0e3ece1e7ace1edef"><span class="__cf_email__" data-cfemail="305d5142495c555e55705d5d4456595e595e434542515e53551e535f5d">[email&#160;protected]</span></a></p>
+    <a href="mailto:marc@mmtfininsurance.com">marc@mmtfininsurance.com</a> | <a href="mailto:marylene@mmtfininsurance.com">marylene@mmtfininsurance.com</a></p>
   </div>
   <div class="slide-footer">MMT Financial and Insurance &nbsp;|&nbsp; Licensed NY/NJ/AZ &nbsp;|&nbsp; Nationwide Appointments Pending</div>
 </section>
@@ -1066,7 +1100,7 @@ strong { color: var(--text-primary); }
       <p class="names">Marc Merritt, RVP | NY Lic LA-1010090</p>
       <p class="names">Marylene Teopengco-Merritt, RVP | NY Lic LA-1298496</p>
       <p class="company">MMT Financial and Insurance | Freedom Equity Group</p>
-      <p class="emails"><a href="/cdn-cgi/l/email-protection#137e726170537e7e67757a7d7a7d606661727d70763d707c7e"><span class="__cf_email__" data-cfemail="6904081b0a2904041d0f000700071a1c1b08070a0c470a0604">[email&#160;protected]</span></a> | <a href="/cdn-cgi/l/email-protection#f59894878c99909b90b5989881939c9b9c9b868087949b9690db969a98"><span class="__cf_email__" data-cfemail="7a171b0803161f141f3a17170e1c13141314090f081b14191f54191517">[email&#160;protected]</span></a></p>
+      <p class="emails"><a href="mailto:marc@mmtfininsurance.com">marc@mmtfininsurance.com</a> | <a href="mailto:marylene@mmtfininsurance.com">marylene@mmtfininsurance.com</a></p>
       <p class="licensing">Licensed NY/NJ/AZ | Nationwide Appointments Pending</p>
     </div>
   </div>
@@ -1089,7 +1123,7 @@ strong { color: var(--text-primary); }
       <strong style="color:var(--gold);">Marylene Teopengco-Merritt, RVP</strong> &nbsp;|&nbsp; NY Lic LA-1298496<br>
       <span style="color:var(--text-secondary);">MMT Financial and Insurance &nbsp;|&nbsp; Freedom Equity Group</span><br>
       <span style="color:var(--text-secondary);">Licensed NY/NJ/AZ &nbsp;|&nbsp; Nationwide Appointments Pending</span><br>
-      <span style="color:var(--text-secondary);">marc@mmtfininsurance.com &nbsp;|&nbsp; marylene@mmtfininsurance.com</span>
+      <span style="color:var(--text-secondary);"><a href="mailto:marc@mmtfininsurance.com">marc@mmtfininsurance.com</a> &nbsp;|&nbsp; <a href="mailto:marylene@mmtfininsurance.com">marylene@mmtfininsurance.com</a></span>
     </p>
   </div>
   <div class="slide-footer">MMT Financial and Insurance &nbsp;|&nbsp; Licensed NY/NJ/AZ &nbsp;|&nbsp; Nationwide Appointments Pending</div>
@@ -1122,12 +1156,15 @@ const navLinks = nav.querySelectorAll('a');
 const slideObserver = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
-      const id = e.target.id;
-      navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+      const index = Array.from(slides).indexOf(e.target);
+      navLinks.forEach((link, i) => {
+        link.classList.toggle('active', i === index);
+      });
     }
   });
-}, { threshold: 0.4 });
+}, { threshold: 0.5 });
 slides.forEach(s => slideObserver.observe(s));
 </script>
+
 </body>
 </html>
