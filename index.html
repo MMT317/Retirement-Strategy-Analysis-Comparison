@@ -33,6 +33,7 @@ body {
   overflow-x: hidden;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  font-size: 18px;
 }
 
 /* ===== HEADER ===== */
@@ -43,7 +44,7 @@ body {
   right: 0;
   background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-card-alt) 100%);
   border-bottom: 2px solid var(--accent-teal);
-  padding: 12px 60px;
+  padding: 8px 60px;
   z-index: 200;
   box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
@@ -53,9 +54,9 @@ body {
   align-items: center;
   max-width: 1800px;
   margin: 0 auto;
-  font-size: 0.75rem;
-  line-height: 1.4;
-  gap: 20px;
+  font-size: 0.72rem;
+  line-height: 1.3;
+  gap: 15px;
 }
 .header-left,
 .header-center,
@@ -85,7 +86,7 @@ body {
   right: 0;
   background: linear-gradient(135deg, var(--bg-card-alt) 0%, var(--bg-card) 100%);
   border-top: 2px solid var(--accent-teal);
-  padding: 12px 60px;
+  padding: 8px 60px;
   z-index: 200;
   box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
 }
@@ -95,9 +96,9 @@ body {
   align-items: center;
   max-width: 1800px;
   margin: 0 auto;
-  font-size: 0.75rem;
-  line-height: 1.4;
-  gap: 20px;
+  font-size: 0.72rem;
+  line-height: 1.3;
+  gap: 15px;
 }
 .footer-section {
   flex: 1;
@@ -148,7 +149,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 100px 80px 100px 80px;
+  padding: 80px 60px 80px 60px;
   position: relative;
   border-bottom: 3px solid var(--accent-teal);
 }
@@ -163,16 +164,17 @@ body {
 /* ===== TYPOGRAPHY ===== */
 h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3.2rem;
+  font-size: 3.8rem;
   font-weight: 700;
   margin-bottom: 12px;
   color: var(--text-primary);
+  letter-spacing: -0.5px;
 }
 h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 2.4rem;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   color: var(--text-primary);
   display: flex;
   align-items: center;
@@ -246,23 +248,24 @@ strong { color: var(--text-primary); }
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
-  margin-bottom: 40px;
+  gap: 40px;
+  margin-bottom: 20px;
 }
 .slide-title h1 {
-  font-size: 3.6rem;
+  font-size: 4.2rem;
   background: linear-gradient(135deg, var(--text-primary), var(--accent-teal));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 8px;
+  letter-spacing: -0.5px;
 }
 .slide-title .subtitle {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: var(--accent-gold);
   font-weight: 500;
-  margin-bottom: 50px;
-  letter-spacing: 1px;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
 }
 .slide-title .prepared-by {
   font-size: 0.95rem;
@@ -279,7 +282,7 @@ strong { color: var(--text-primary); }
 .stat-row {
   display: flex;
   gap: 40px;
-  margin: 40px 0;
+  margin: 20px 0;
   justify-content: center;
 }
 .stat-box {
@@ -574,8 +577,8 @@ strong { color: var(--text-primary); }
 .phrase-card {
   background: var(--bg-card);
   border-radius: 12px;
-  padding: 28px 32px;
-  margin-bottom: 20px;
+  padding: 18px 24px;
+  margin-bottom: 12px;
   position: relative;
   overflow: hidden;
 }
@@ -591,14 +594,14 @@ strong { color: var(--text-primary); }
 .phrase-blue::before { background: #4a90d9; }
 .phrase-orange::before { background: var(--accent-orange); }
 .phrase-card h4 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 .phrase-card h4.c-teal { color: var(--accent-teal); }
 .phrase-card h4.c-blue { color: #4a90d9; }
 .phrase-card h4.c-orange { color: var(--accent-orange); }
-.phrase-card p { margin: 0; font-size: 0.95rem; }
+.phrase-card p { margin: 0; font-size: 1.1rem; line-height: 1.7; }
 
 /* ===== CTA SLIDE ===== */
 .cta-block {
@@ -608,41 +611,43 @@ strong { color: var(--text-primary); }
 }
 .cta-question {
   font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-style: italic;
   color: var(--text-primary);
-  line-height: 1.8;
-  margin-bottom: 50px;
-  padding: 30px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  padding: 20px;
   border-left: 4px solid var(--accent-gold);
   text-align: left;
 }
-.cta-info { text-align: center; margin-top: 30px; }
+.cta-info { text-align: center; margin-top: 20px; }
 .cta-info .names {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 .cta-info .company {
+  font-size: 1.15rem;
   color: var(--accent-teal);
   font-weight: 500;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 .cta-info .emails a {
+  font-size: 1.1rem;
   color: var(--accent-teal);
   text-decoration: none;
 }
 .cta-info .licensing {
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   color: var(--text-muted);
-  margin-top: 8px;
+  margin-top: 10px;
   line-height: 1.8;
 }
 
 /* ===== DISCLOSURES ===== */
 .disclosures {
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   color: var(--text-muted);
   line-height: 1.9;
   max-width: 1100px;
@@ -691,11 +696,19 @@ strong { color: var(--text-primary); }
 .rmd-card p { font-size: 0.88rem; margin-bottom: 10px; }
 
 /* ===== EMERGENCY SLIDE ===== */
-.emergency-row { display: flex; gap: 30px; margin: 30px 0; }
+.emergency-row { display: flex; gap: 20px; margin: 20px 0; }
 .emergency-box {
   flex: 1;
   border-radius: 12px;
-  padding: 36px;
+  padding: 20px;
+}
+.emergency-box h4 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+.emergency-box p {
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 .emergency-401k {
   background: linear-gradient(145deg, #2a1a1a, var(--bg-card));
@@ -706,8 +719,9 @@ strong { color: var(--text-primary); }
   border-top: 4px solid var(--accent-teal);
 }
 
-/* ===== EMAIL LINKS ===== */
-a[href^="mailto:"] {
+/* ===== EMAIL & PHONE LINKS ===== */
+a[href^="mailto:"],
+a[href^="tel:"] {
   color: var(--accent-teal);
   text-decoration: none;
   word-break: break-word;
@@ -717,7 +731,8 @@ a[href^="mailto:"] {
   -webkit-touch-callout: default;
   transition: color 0.3s ease;
 }
-a[href^="mailto:"]:hover {
+a[href^="mailto:"]:hover,
+a[href^="tel:"]:hover {
   text-decoration: underline;
   color: var(--accent-gold);
 }
@@ -735,15 +750,18 @@ a[href^="mailto:"]:hover {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
-  .slide { padding: 80px 40px 80px 40px; }
-  h1 { font-size: 2.4rem; }
-  h2 { font-size: 1.8rem; }
+  .slide { padding: 50px 35px 50px 35px; }
+  h1 { font-size: 2.8rem; }
+  h2 { font-size: 2.2rem; }
+  h3 { font-size: 1.6rem; }
+  p { font-size: 1.15rem; }
   .two-col, .three-col, .rmd-cards { grid-template-columns: 1fr; }
   .stat-row { flex-direction: column; align-items: center; }
   .inherit-row, .result-banner, .emergency-row { flex-direction: column; }
   .slide-nav { display: none; }
-  .slide-title h1 { font-size: 2.2rem; }
-  .slide-footer { left: 40px; right: 40px; }
+  .slide-title h1 { font-size: 2.8rem; }
+  .slide-title .subtitle { font-size: 1.3rem; }
+  .slide-footer { left: 35px; right: 35px; }
   
   .main-header,
   .main-footer {
@@ -755,15 +773,109 @@ a[href^="mailto:"]:hover {
   }
 }
 @media (max-width: 600px) {
+  /* Better logo spacing under header for mobile */
+  .slide-title {
+    padding-top: 75px !important;
+  }
+  .slide-title .logos-center {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    gap: 20px;
+    flex-direction: row;
+  }
+  .slide-title .logos-center img {
+    max-width: 100px;
+    height: auto;
+  }
+  
+  /* Improve content centering on mobile */
+  .slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px 15px 75px 15px;
+  }
+  .two-col, .three-col, .rmd-cards {
+    width: 100%;
+  }
+  .comp-table-container,
+  .life-table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+  h1, h2, h3, p {
+    text-align: center;
+  }
+  .prepared-by {
+    text-align: center;
+  }
+
   .slide { padding: 90px 20px 90px 20px; }
-  h1 { font-size: 1.9rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1rem; }
-  p { font-size: 0.95rem; }
-  .comp-table, .life-table { font-size: 0.78rem; }
-  .comp-table thead th, .life-table thead th { padding: 10px 8px; font-size: 0.7rem; }
-  .comp-table tbody td, .life-table tbody td { padding: 10px 8px; }
-  .slide-footer { left: 20px; right: 20px; font-size: 0.7rem; }
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.3rem; }
+  p { font-size: 1.05rem; }
+  
+  /* Title slide specific adjustments */
+  .slide-title h1 { 
+    font-size: 2rem; 
+    margin-bottom: 14px;
+  }
+  .slide-title .subtitle {
+    font-size: 1.15rem;
+    margin-bottom: 30px;
+  }
+  .slide-title .prepared-by {
+    font-size: 0.95rem;
+    margin-top: 30px;
+  }
+  .comp-table, .life-table { 
+    font-size: 0.85rem; 
+    margin: 20px 0;
+  }
+  .comp-table thead th, .life-table thead th { padding: 11px 9px; font-size: 0.78rem; }
+  .comp-table tbody td, .life-table tbody td { padding: 11px 9px; }
+  .slide-footer { 
+    left: 15px; 
+    right: 15px; 
+    font-size: 0.7rem;
+    bottom: 75px;
+  }
+  
+  /* Override inline styles for specific slides on mobile */
+  .slide-disclosures {
+    padding-top: 140px !important;
+    padding-bottom: 130px !important;
+  }
+  
+  /* Additional spacing adjustments for mobile */
+  .stat-row {
+    margin: 20px 0;
+  }
+  .stat-box {
+    margin-bottom: 15px;
+    padding: 18px 25px;
+  }
+  .two-col, .three-col {
+    gap: 15px;
+  }
+  .comp-table-container,
+  .life-table-container {
+    margin: 15px 0;
+  }
+  .cta-block {
+    padding: 10px 0;
+  }
+  .phrase-card {
+    margin-bottom: 10px;
+    padding: 14px 18px;
+  }
+  
+  /* Ensure all slides have consistent spacing */
+  .slide > * {
+    max-width: 100%;
+  }
   a[href^="mailto:"] {
     font-size: 0.85rem;
     word-wrap: break-word;
@@ -780,14 +892,22 @@ a[href^="mailto:"]:hover {
   /* Stack header and footer on mobile */
   .main-header,
   .main-footer {
-    padding: 8px 15px;
+    padding: 5px 10px;
   }
   .header-content,
   .footer-content {
     flex-direction: column;
-    gap: 8px;
-    font-size: 0.65rem;
-    line-height: 1.3;
+    gap: 4px;
+    font-size: 0.56rem;
+    line-height: 1.2;
+  }
+  .header-content a,
+  .footer-content a {
+    font-size: 0.56rem;
+  }
+  .header-content strong,
+  .footer-content strong {
+    font-size: 0.58rem;
   }
   .header-left,
   .header-center,
@@ -809,14 +929,15 @@ a[href^="mailto:"]:hover {
   <div class="header-content">
     <div class="header-left">
       <strong>Marc Merritt, RVP</strong> | NY Lic LA-1010090<br>
-      <strong>Marylene Teopengco-Merritt, RVP</strong> | NY Lic LA-1298496
+      <a href="tel:+16466452453">1-646-645-2453</a> | <a href="mailto:marc@mmtfininsurance.com">marc@mmtfininsurance.com</a>
     </div>
     <div class="header-center">
-      <strong>MMT Financial and Insurance | Freedom Equity Group</strong>
+      <strong>MMT Financial and Insurance | Freedom Equity Group</strong><br>
+      Licensed NY/NJ/AZ | Nationwide Appointments Pending
     </div>
     <div class="header-right">
-      <a href="mailto:marc@mmtfininsurance.com">marc@mmtfininsurance.com</a><br>
-      <a href="mailto:marylene@mmtfininsurance.com">marylene@mmtfininsurance.com</a>
+      <strong>Marylene Teopengco-Merritt, RVP</strong> | NY Lic LA-1298496<br>
+      <a href="tel:+16315791904">1-631-579-1904</a> | <a href="mailto:marylene@mmtfininsurance.com">marylene@mmtfininsurance.com</a>
     </div>
   </div>
 </header>
@@ -1238,7 +1359,7 @@ a[href^="mailto:"]:hover {
 </section>
 
 <!-- ======================== SLIDE 17: DISCLOSURES ======================== -->
-<section class="slide" id="s17" style="justify-content:flex-start; padding-top:60px; padding-bottom:80px;">
+<section class="slide slide-disclosures" id="s17" style="justify-content:flex-start;">
   <h2 style="font-size:1.6rem; margin-bottom:20px;">Important Disclosures</h2>
   <div class="disclosures">
     <p>1. This presentation is for educational and informational purposes only and does not constitute tax, legal, or investment advice. Consult your tax advisor, attorney, or financial professional before making any financial decisions.</p>
@@ -1265,55 +1386,18 @@ a[href^="mailto:"]:hover {
   <div class="footer-content">
     <div class="footer-section">
       <strong>Marc Merritt, RVP</strong> | NY Lic LA-1010090<br>
-      <strong>Marylene Teopengco-Merritt, RVP</strong> | NY Lic LA-1298496
+      <a href="tel:+16466452453">1-646-645-2453</a> | <a href="mailto:marc@mmtfininsurance.com">marc@mmtfininsurance.com</a>
     </div>
     <div class="footer-section">
       <strong>MMT Financial and Insurance | Freedom Equity Group</strong><br>
       Licensed NY/NJ/AZ | Nationwide Appointments Pending
     </div>
     <div class="footer-section">
-      <a href="mailto:marc@mmtfininsurance.com">marc@mmtfininsurance.com</a><br>
-      <a href="mailto:marylene@mmtfininsurance.com">marylene@mmtfininsurance.com</a>
+      <strong>Marylene Teopengco-Merritt, RVP</strong> | NY Lic LA-1298496<br>
+      <a href="tel:+16315791904">1-631-579-1904</a> | <a href="mailto:marylene@mmtfininsurance.com">marylene@mmtfininsurance.com</a>
     </div>
   </div>
 </footer>
-
-<!-- ====== JAVASCRIPT ====== -->
-<script>
-// Generate nav dots
-const slides = document.querySelectorAll('.slide');
-const nav = document.getElementById('slideNav');
-slides.forEach((s, i) => {
-  const a = document.createElement('a');
-  a.href = '#s' + (i + 1);
-  a.title = 'Slide ' + (i + 1);
-  nav.appendChild(a);
-});
-
-// Scroll animations
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.15 });
-document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-// Active nav dot
-const navLinks = nav.querySelectorAll('a');
-const slideObserver = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      const index = Array.from(slides).indexOf(e.target);
-      navLinks.forEach((link, i) => {
-        link.classList.toggle('active', i === index);
-      });
-    }
-  });
-}, { threshold: 0.5 });
-slides.forEach(s => slideObserver.observe(s));
-</script>
 
 </body>
 </html>
