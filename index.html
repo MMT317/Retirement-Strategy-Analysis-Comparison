@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Retirement Strategy Comparison - 401(k)/403(b) vs IUL & FIA</title>
     <style>
         * {
@@ -23,6 +25,9 @@
             color: white;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         
         .header-content {
@@ -65,6 +70,9 @@
             text-decoration: none;
             display: inline;
             margin: 0;
+            padding: 5px;
+            min-height: 44px;
+            min-width: 44px;
         }
         
         .contact-info a:hover {
@@ -113,6 +121,12 @@
             border-collapse: collapse;
             margin: 25px 0;
             font-size: 1.1em;
+        }
+        
+        table.mobile-scroll {
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
         }
         
         th {
@@ -167,6 +181,12 @@
             padding: 25px;
             margin: 20px 0;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .strategy-card table {
+            width: 100%;
+            table-layout: fixed;
         }
         
         .strategy-card.winner {
@@ -290,6 +310,10 @@
         }
         
         @media (max-width: 768px) {
+            .header {
+                padding: 15px 10px;
+            }
+            
             .header-content {
                 flex-direction: column;
                 text-align: center;
@@ -298,30 +322,116 @@
             .contact-info {
                 text-align: center;
                 margin-top: 15px;
+                font-size: 0.85em;
             }
             
             .logo-container {
                 justify-content: center;
+                gap: 15px;
+            }
+            
+            .logo {
+                height: 70px;
             }
             
             .slide {
-                padding: 20px;
+                padding: 20px 15px;
             }
             
             h1 {
-                font-size: 1.8em;
+                font-size: 1.6em;
             }
             
             h2 {
-                font-size: 1.5em;
+                font-size: 1.4em;
+                margin: 20px 0 15px 0;
+            }
+            
+            h3 {
+                font-size: 1.2em;
             }
             
             table {
-                font-size: 0.9em;
+                font-size: 0.85em;
+                display: block;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
             }
             
             th, td {
-                padding: 10px 5px;
+                padding: 10px 8px;
+                font-size: 0.9em;
+            }
+            
+            .quote-box {
+                padding: 20px 15px;
+                font-size: 1em;
+            }
+            
+            .highlight {
+                padding: 20px 15px;
+                font-size: 1.1em;
+            }
+            
+            .power-phrase {
+                padding: 15px 20px;
+                font-size: 1em;
+            }
+            
+            .strategy-card {
+                padding: 15px;
+                margin: 15px 0;
+            }
+            
+            .cta-box {
+                padding: 25px 15px;
+            }
+            
+            .cta-button {
+                display: block;
+                width: 90%;
+                margin: 10px auto;
+                padding: 15px 20px;
+                font-size: 1em;
+            }
+            
+            ul, li {
+                font-size: 1em;
+            }
+            
+            .contact-info strong {
+                display: block;
+                margin-top: 10px;
+            }
+            
+            .contact-info a {
+                font-size: 0.9em;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo {
+                height: 60px;
+            }
+            
+            h1 {
+                font-size: 1.4em;
+            }
+            
+            h2 {
+                font-size: 1.2em;
+            }
+            
+            .contact-info {
+                font-size: 0.8em;
+            }
+            
+            table {
+                font-size: 0.75em;
+            }
+            
+            th, td {
+                padding: 8px 5px;
             }
         }
     </style>
