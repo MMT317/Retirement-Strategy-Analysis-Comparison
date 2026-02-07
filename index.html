@@ -63,8 +63,8 @@
         .contact-info a {
             color: #FFD700;
             text-decoration: none;
-            display: block;
-            margin: 5px 0;
+            display: inline;
+            margin: 0;
         }
         
         .contact-info a:hover {
@@ -126,6 +126,8 @@
         td {
             padding: 15px;
             border-bottom: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
         }
         
         tr:nth-child(even) {
@@ -420,28 +422,28 @@
                 <h3 style="color: #d32f2f;">❌ 401(k) Loan Default (Age 50, 24% Tax Bracket)</h3>
                 <table style="margin-top: 20px;">
                     <tr>
-                        <th>Expense Type</th>
-                        <th>Calculation</th>
-                        <th>Total Cost</th>
+                        <th style="width: 40%;">Expense Type</th>
+                        <th style="width: 35%;">Calculation</th>
+                        <th style="width: 25%; text-align: right;">Total Cost</th>
                     </tr>
                     <tr>
                         <td>Federal Income Tax</td>
                         <td>$50,000 x 24%</td>
-                        <td>$12,000</td>
+                        <td style="text-align: right;">$12,000</td>
                     </tr>
                     <tr>
                         <td>Early Withdrawal Penalty</td>
                         <td>$50,000 x 10%</td>
-                        <td>$5,000</td>
+                        <td style="text-align: right;">$5,000</td>
                     </tr>
                     <tr>
                         <td>State Income Tax (NY)</td>
                         <td>$50,000 x ~6%</td>
-                        <td>$3,000</td>
+                        <td style="text-align: right;">$3,000</td>
                     </tr>
                     <tr style="background-color: #ffebee;">
                         <td colspan="2"><strong>Total Immediate Cost</strong></td>
-                        <td><strong style="color: #d32f2f; font-size: 1.3em;">$20,000</strong></td>
+                        <td style="text-align: right;"><strong style="color: #d32f2f; font-size: 1.3em;">$20,000</strong></td>
                     </tr>
                 </table>
                 <p style="margin-top: 20px; font-weight: bold; color: #d32f2f;">Plus: That $50,000 would have grown to $137,950 over 15 years at 7% return. Total loss: over $100,000!</p>
@@ -451,23 +453,23 @@
                 <h3 style="color: #2e7d32;">✓ IUL (F&G) Participating Loan</h3>
                 <table style="margin-top: 20px;">
                     <tr>
-                        <th>Expense Type</th>
-                        <th>How it Works</th>
-                        <th>Net Cost/Gain</th>
+                        <th style="width: 40%;">Expense Type</th>
+                        <th style="width: 35%;">How it Works</th>
+                        <th style="width: 25%; text-align: right;">Net Cost/Gain</th>
                     </tr>
                     <tr>
                         <td>Loan Interest Charged</td>
                         <td>F&G charges (e.g., 5.5% capped)</td>
-                        <td>-$2,750/yr</td>
+                        <td style="text-align: right;">-$2,750/yr</td>
                     </tr>
                     <tr>
                         <td>Index Credit Earned</td>
                         <td>Your $50k stays in index (e.g., 7% return)</td>
-                        <td>+$3,500/yr</td>
+                        <td style="text-align: right;">+$3,500/yr</td>
                     </tr>
                     <tr style="background-color: #e8f5e9;">
                         <td colspan="2"><strong>Net Result</strong></td>
-                        <td><strong style="color: #2e7d32; font-size: 1.3em;">+$750 Gain</strong></td>
+                        <td style="text-align: right;"><strong style="color: #2e7d32; font-size: 1.3em;">+$750 Gain</strong></td>
                     </tr>
                 </table>
                 <ul style="margin-top: 20px;">
